@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wingspan: 1
+  name: MyString
+  color: MyString
+
+two:
+  wingspan: 1
+  name: MyString
+  color: MyString
