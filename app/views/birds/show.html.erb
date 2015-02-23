@@ -6,6 +6,6 @@ Wingspan: <%= @bird.wingspan %>
 <br>
 <%= link_to "Back", birds_path %>
 <br>
-<%= link_to "Edit Bird" %>
+<%= link_to "Edit Bird", edit_bird_path(@bird) %>
 <br>
-<%= link_to "Delete Bird" %>
+<%= link_to "Delete Bird", bird_path(@bird), method: "delete", confirm: {data: "Are you sure you want to delete?"} %>

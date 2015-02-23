@@ -21,6 +21,10 @@ class BirdsController < ApplicationController
     end
   end
 
+  def edit
+    @bird = Bird.find(params[:id])
+  end
+
   private
 
   def bird_params
