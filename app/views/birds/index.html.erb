@@ -1,0 +1,14 @@
+<h1>BIRDS</h1>
+<%= link_to "New Bird" %>
+<hr>
+<br>
+<% @birds.each do |bird| %>
+  Name: <%= bird.name %>
+  <br>
+  Color: <%= bird.color %>
+  <br>
+  Wingspan: <%= bird.wingspan %>
+  <br>
+  <%= link_to "Show Bird", bird_path(bird) %>
+  <hr>
+<% end %>
