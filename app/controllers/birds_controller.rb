@@ -25,6 +25,20 @@ class BirdsController < ApplicationController
     @bird = Bird.find(params[:id])
   end
 
+  def update
+    @bird = Bird.find(params[:id])
+    if @bird.update(bird_params)
+      redirect_to bird_path(@bird), notice: "Bird was successfully updated"
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    Bird.destroy(params[:id])
+    redirect_to birds_path
+  end
+
   private
 
   def bird_params
